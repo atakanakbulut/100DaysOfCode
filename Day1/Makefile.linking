@@ -1,0 +1,15 @@
+copyright: Atakan Akbulut
+
+all: target
+
+xlibrary :
+	echo "xlibrary linking"
+
+target1 : xlibrary
+	echo "Target 1 creating"
+
+target2 : xlibrary
+	echo "Target 2 creating"
+
+target : target1 target2 xlibrary
+	echo "Master Target creating"

@@ -1,0 +1,13 @@
+make all:
+	g++ *.cpp -o makefile1.bin
+
+make:
+	g++ main.cpp -o makefile1.bin
+
+deploy:
+	cp makefile1.bin deploy.bin
+	echo "Deploy completed."
+
+clean:
+	rm -r *.bin
+	echo "Cleaning."

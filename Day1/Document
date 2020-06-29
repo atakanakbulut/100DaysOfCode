@@ -1,0 +1,48 @@
+Makefile is generally using C/C++ project's build options. In the Linux systems using
+make command, otherwise Windows systems using nmake tools.
+
+Makefiles is mostly output program's source has code compiling, linking, dependency, cleanall, clean, make all options.
+A lot of big project has own Makefile and build system(configure). 
+** makefile is overrun Makefile !!
+Let's start.
+
+================================================
+Makefile struct,
+
+TARGET: dependency
+[1 TAB] command 1
+[1 TAB] command 2
+
+Makefile is using source code's change time. İf source file changed for a time rebuild again otherwise makefile files not run 
+unnecessary.
+
+================================================
+Makefile example:
+
+all: deploy
+
+build: 
+    echo "Build all"
+
+unit_test:
+    echo "Running unit test tool"
+
+deploy:
+    echo "deploy to target"
+    echo "command 2" -> second command
+    echo "command 3" -> third command
+
+clean:
+    rm -r *.o
+
+Warning!!! : Be sure using 1 TAB
+
+================================================
+Example's usage:
+copy Makefile.1 as Makefile and run 
+$make command
+
+================================================
+PHONY
+if you want always Makefile overrun mode add to PHONY
+mode to Makefile

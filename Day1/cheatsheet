@@ -1,0 +1,14 @@
+$@ is the name of the target. 
+client: client.c
+        $(CC) client.c -o $@
+
+=================================================
+Replacing Text
+OBJ = $(SRC:.c=.o)
+
+
+=================================================
+Print to screen
+viewsource: client.c server.c
+        less $^
+

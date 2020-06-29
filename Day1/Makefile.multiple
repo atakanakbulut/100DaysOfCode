@@ -1,0 +1,8 @@
+
+CC = g++
+
+client: client.c
+	$(CC) client.c -o $@
+ 
+server: server.c
+	$(CC) server.c -o $@

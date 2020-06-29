@@ -1,0 +1,21 @@
+include depend.make
+
+.PHONY: binary
+
+SRC = $(wildcard *.cpp)
+OBJ = $(SRC:%.cpp=%.o)
+
+CFLAGS = -g -Wall -Wextra
+CXX = g++
+
+all : makeall
+
+makeall : $(DEPS) $(OBJ)
+	echo "Building.."
+	$(CXX) $(CFLAGS) -o $(TARGET) $(OBJ) $(LPATH) $(SYSROOT)
+
+clean :
+	echo "Cleaning"
+	rm -r *.o $(TARGET) 
+
+oneshotrelease : all
