@@ -13,3 +13,5 @@
 
 
 #### Day 1 - Makefile
+#### Day 2 - Templates
+
