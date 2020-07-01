@@ -1,0 +1,34 @@
+Container class;
+
+    *array is a container class, Its fixed size arrays. 
+
+Template define;
+std::array<type, 10> arr;
+
+Access functions;
+at -> return value of type
+front -> return ptr
+back -> return ptr
+data -> return ptr
+
+iterators;
+begin -> standart iterator
+end -> standart iterator
+rbegin -> reverse iterator
+rend -> reverse iterator
+
+Size / Capasity
+empty -> return true or false
+size -> return array's size
+
+operators;
+std::swap(array1 ,array2) -> swap 2 array
+arr->fill(X) -> fill all elements with X
+
+reverse copy;
+
+std::reverse_copy(array1.begin(), array1.end(), 
+                      std::ostream_iterator<int>(std::cout, " "));    -> from end to first print data
+
+operators
+array[x] -> access x. element
