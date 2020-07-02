@@ -1,3 +1,35 @@
 Container class;
     
-	map has a member of container classes 
+        map has a member of container classes
+
+MAP = PAIR (KEY, VALUE)
+
+#define like template func
+std::map<std::string, int> map;
+map.insert(std::make_pair("123", 1))
+
+#element access
+at(x) -> return value
+operator[x] -> return value
+
+#iterator
+begin -> ptr
+end -> ptr
+last -> ptr
+
+#capasity and size
+empty -> return true if full
+size -> return size of map
+
+#modifiers
+clear -> clear data
+insert -> insert map (make_pair(int, int))
+erase -> delete x. element
+swap -> std::swap(m1, m2)
+merge -> mainMap.merge(m1)
+find -> if(map.find("Atik") != map.end()) { std::cout << "Atik Exist" << std::endl;}
+
+
+
+
+
