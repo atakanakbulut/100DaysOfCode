@@ -1,0 +1,41 @@
+UNORDERED MAP CLASS
+
+
+Actually similar to standart map class but unordered map is an associative container that contains key-value pairs with unique keys.
+
+MAP VS UNORDERED MAP
+
+- unordered map more faster when we search big relations table
+- map is sequenced stroage with alphabet,  unordered is mixed
+- Access speed map  O(logN), unordered map   O(1) or O(N).
+
+
+#iterators
+begin -> ptr
+end -> ptr
+
+#capasity
+empty -> bool
+size -> value
+max_size -> value
+
+#modifiers
+clear -> clear
+insert -> std::make_pair(a,b)
+insert_or_assign 
+eplace
+erase
+swap
+extract
+merge
+
+#lookup
+at
+operator[]
+cound
+find
+contains c++20
+
+Hash policy
+load_factor -> Returns the average number of elements per bucket
+
