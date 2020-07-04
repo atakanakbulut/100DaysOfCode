@@ -15,8 +15,9 @@
 #### Day 1 - Makefile
 #### Day 2 - Templates
 #### Day 3 - Array
-#### Day 3 - Map
-#### Day 3 - Unordered Map
+#### Day 4 - Map
+#### Day 5 - Unordered Map
+#### Day 6 - Auto Part 1
 
 
 
