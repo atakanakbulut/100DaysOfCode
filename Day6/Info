@@ -1,0 +1,11 @@
+# Declarations : AUTO(C++11) PART 1
+
+auto declarator initializer;
+Type interface refers to automatic deduction of data types. in c++ 98 each data 
+need to be explicitly declare at compile time. auto keyword do automatic this process.
+
+
+auto def1 = 3;
+auto def2 = 3.4;
+auto def3 = 500000000;
+audo def4 = &myPtr;
