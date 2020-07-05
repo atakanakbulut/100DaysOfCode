@@ -18,6 +18,7 @@
 #### Day 4 - Map
 #### Day 5 - Unordered Map
 #### Day 6 - Auto Part 1
+#### Day 7 - Auto Part 2
 
 
 
