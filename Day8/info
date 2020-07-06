@@ -1,0 +1,5 @@
+
+
+set is collection of unique keys, sorted by keys
+
+set can include different types !!! (int, string, class, float)

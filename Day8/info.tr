@@ -1,0 +1,6 @@
+Set fonksiyonu eşşiz elemanları sıralı olarak saklayan konteynırlardır.
+Eşşiz söyleminden asıl kasıt bir eleman değerinin ((int)5) değerinin sadece 
+1 kez bulunabilecek olmasıdır. set içerisindeki elemanların değerleri degiştirilemez.
+fakat eklenip silinebilirler. Elemanlar küçükten büyüge doğru sıralanır.
+
+Yapay zeka algoritmalarında kullanılmaktadır.
