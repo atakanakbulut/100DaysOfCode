@@ -1,0 +1,7 @@
+#### MULTISET ####
+
+multiset is an associative container that contains a sorted set of objects of type Key
+
+difference between set;
+Unlike multiset sets, there are more than one element of the same value.
+

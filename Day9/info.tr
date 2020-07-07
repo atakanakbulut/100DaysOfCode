@@ -1,0 +1,7 @@
+#### Multiset ####
+
+multiset setlerden farklı olarak aynı değerde birden fazla eleman bulunabilir.
+Elemanları suralı biçimde depolayan konteynır sınıfıdır. multisetin elemanlar consttur yani
+elemanların değeri degiştirilemez silinebilir veya  eklenebilinir.Binary tree gibi çalışır.
+
+Yapay zeka uygulamalarında kullanılmaktadır.
