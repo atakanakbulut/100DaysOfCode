@@ -1,0 +1,180 @@
+# This document main differance between c++98 and c++11
+
+----------------------------------------------------------------------------------------
+
+1 -> auto
+
+    Auto degişken türünün compiling time içerisinde belirlenmesini saglamaktadır.
+Genelllikle uzun for ve iterator kod parçalarını kısaltmak ve basitleştirmek amacı ile kullanılıyor.
+
+auto aa = "Atakan Akbulut"
+auto bb = 1234
+auto cc = new Entitiy()
+
+----------------------------------------------------------------------------------------
+
+2 -> nullptr
+
+    c++11 in getirisinden biri de nullptr eklenmesidir. Normal şartlarda NULL ile nullptr aynı 
+fakat NULL == (int)0 eşittir.
+
+    if(NULL == nullptr && NULL == 0)
+    {
+        std::cout << "esit yani NULL = " << (int)NULL << std::endl;
+    }
+    
+    c++11 üzerinde nullptr kullanılması daha uygun olacaktır.
+----------------------------------------------------------------------------------------
+3 -> enum
+
+    normal şartlarda Standart C kütüphanesinin enum kullanılmaktadır. Fakat bu güvenli bir sistem degildir.
+c++11 ile scope resolution operator ile kullanılması ve class olarak tanımlanmalıdır.
+
+// c++11 öncesi
+enum Month
+{
+	JANUARY
+        FEBRUARY
+        MARCH
+        APRIL
+        MAY
+}
+
+int aa = JANUARY; 
+
+// c++11 sonrası
+enum class Month
+{
+	JANUARY
+        FEBRUARY
+        MARCH
+        APRIL
+        MAY
+}
+
+Mouth mm = Month::MAY;
+
+----------------------------------------------------------------------------------------
+
+4 -> loop döngüleri ve iterator
+     
+    auto sayesinde çok kısa iteratörler yazılabilir.
+
+int a[8] = {1,2,3,4,5,6,7,8};
+
+for(auto sayi : a)
+    std::cout << mevcut<< " ";
+std::cout << std::endl;
+
+----------------------------------------------------------------------------------------
+
+5 -> decltype 
+
+     Bu keyword sayesinde bir degişkenin türünü bulmamızı saglar
+
+int a = 3;
+decltype(a) b = 4;
+
+
+----------------------------------------------------------------------------------------
+
+6 -> initlizer list
+
+    bir dizi,vectoru, map sınıfını tanımlarken initlizer list ekleyerek tanımlamızı sağlar.
+
+int sayi[5] = {1,2,3,4,5,6,7,8,9}
+std::vector<int> b {1,2,3,4,5,6,7,8}
+std::map<int, std::string> {{1,"bir"}, {2, "iki"}}
+
+----------------------------------------------------------------------------------------
+
+7 -> Uniform initlizer
+
+    Süslü parantez kullanımını gelişmiştir. Artık class initlize ederken bile süslü parantez kullanılabilir.
+
+
+class class Entitiy1
+{
+    Entitiy(int a, std::string b) {}
+}
+{
+    public:
+        Entitiy(int a, std::string b) {}
+}
+
+class Entitiy2
+{
+    public:
+         int a;
+         std::string b;
+}
+
+Entitiy1 e1 = {1, "Atakan"};
+Entitiy2 e2 = {2, "Atakan"};
+
+----------------------------------------------------------------------------------------
+
+8 -> static assert 
+
+bu tanımlamada normal assert fonksiyonundan farklı (assert fonksiyonu runtime fonksiyondur) compile
+time da çalışmaktadır.
+
+assert(sizeof(int) == 4); // assert 
+
+static_assert(sizeof(int) == 4), "error");
+
+int a = 9;
+int b = 4;
+static_assert(a > b, "Vector size is too small!"); 
+-------------------------------------------------------------------------------------
+
+9 -> Delegating Constructor
+
+Bir Class diger clası consturctor içeriside çagırabilir.
+
+-------------------------------------------------------------------------------------
+
+10 -> final
+
+Yazılım geliştirirken kodun yeniden kullanılabilirligi  için eklenmiştir. Bazı sınıfların
+kalıtıl alınması istenmeyebilir.
+
+-------------------------------------------------------------------------------------
+
+11 -> default
+
+Normal OOP de kurucu yıkıcı fonksiyonlar diger dillerde otomatik üretilir. C++ da bu yoktur.
+Bu durumda default eklenmiştir.
+
+Class Entitiy
+{
+   public:
+   Entitiy() = default
+}
+
+-------------------------------------------------------------------------------------
+
+12 -> constexpr
+
+const tanımlamak için kullanılan keyworkddur. ancak fark fonksiyon hesaplama gibi 
+sonucu sadece constexpr olabilir
+
+constexpr test1 = (constexpr) getParam()
+
+-------------------------------------------------------------------------------------
+
+13 -> string literals
+
+utf8 gibi string olusturmamızı saglıyor
+
+std::string ss = u8"(Atakan\nAkbulut)"
+
+14 -> smart pointers
+
+100 days of da eklenecektir
+
+15 -> tuple
+
+100 days of da eklenecektir
+
+
