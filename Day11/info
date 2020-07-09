@@ -1,0 +1,30 @@
+#### SMART POINTERS ####
+
+Add <memory> header for smart pointers 
+
+## unique_ptr ##
+
+Specs
+--> unique_ptr's object cannot copy just move with std::move 
+--> unique_ptr cannot share own memory area.
+--> make_unique cannot contruct structs we can do with Class 
+
+
+class0
+{
+    private:
+        class() = default;
+}
+
+class1
+{
+    private:
+        unique_ptr<class0> fac;
+
+    public:
+        void class1() 
+        {
+            std::make_unique<class0>()  ----> create objects with make_unique 
+        }
+
+}
