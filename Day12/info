@@ -1,0 +1,18 @@
+#### SMART POINTERS ####
+
+Add <memory> header for smart pointers 
+
+## shared_ptr ##
+
+Specs
+    sharedptr.reset(new Entity) -> reset function is replaces the managed object
+    std::shared_ptr is a smart pointer that retains shared ownership of an object through a pointer
+    sharedptr.get() -> return referance
+    make_shared -> creates a shared pointer that manages a new object
+    
+thread usage;
+    need -pthread to makefile otherwise we can get core dump error
+
+
+
+
