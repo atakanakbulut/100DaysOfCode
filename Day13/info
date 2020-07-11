@@ -1,0 +1,7 @@
+#### SMART POINTERS ####
+
+Add <memory> header for smart pointers 
+
+## weak_ptr ##
+
+shared ptr => ( shared ptr's counter  + weak_ptr's counter + target referance)

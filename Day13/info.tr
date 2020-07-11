@@ -1,0 +1,48 @@
+#### SMART POINTERS ####
+
+## weak_ptr ##
+
+Weak pointer konusunundan önce smart pointer olan shared ptr
+nesnesinin yapısı önemlidir. eklenen smart_weak.png dosyasında shared_ptr 
+ın raw pointer ın nasıl wrapper yapısı görülmektedir.
+
+** weak_ptr'ler ancak başka bir weak_ptr ya da shared_ptr sayesinde var olabilirler
+nesnesinin yaşam süresine etki etmezler. weak ptr için derefferance(*) ve -> operatörleri 
+geçersizdir.bu sebeble zayıf ptr isimleri alınır. Asıl görevi shared_ptr nin geçerli olup olmadığını 
+kontrol etmektir.(cycle referance)
+
+cycle referance örnegi;
+std::shared_ptr<Entity> c1(new Entity);
+std::shared_ptr<Entity> c2;
+
+c1 = c2;
+c2 = c1;
+
+yani sonsuzluk yaratmasıdır.
+weak_ptr dan shared ptr elde etmek için c1.lock() kullanılmaktadır. reset ile içi boşaltılabilir.
+
+
+Smart pointer olarak yaratıldıgında;
+raw pointer
+shared pointer count 
+weak pointer count
+
+olarak 3 bölümden oluşmaktadır.
+
+
+
+Manager object her yeni referasta shared_ptr veya weak_ptr artmaktadır.
+std::shared_ptr<Entity> p1(new Entity);
+std::shared_ptr<Entity> p2;
+p1 = p2
+
+p1.count >> 2 yi gösterecektir.
+p2.reset() >> ile 1 i gösterecektir.
+
+** Weak sayısı arttıgında weak counter artacaktır.
+
+** Önerilen kullanım ise 1 shared pointer referansını weak ptr ye atayalım ve weak.lock() ile nesnenin. 
+resetlenme ihtimaline karşı gerekli bir önlemdir.
+
+** Diger kullanım ise this kullanımı yerine shared_from_this kullanılmalıdır. 
+Foo sınıfında kullanım örnegi eklenmiştir.
