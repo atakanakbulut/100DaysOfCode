@@ -1,0 +1,29 @@
+### Utilities ###
+
+libraries 
+
+1 - language support libraries
+2 - general-purpose libraries
+
+1 - language support libraries
+    1 - initializer_list
+    2 - Program utilities (std::abort, std::atexit)
+    3 - Object access (launder)
+    4 - Error handling (exceptions)
+    5 - Three-way comparison c++20
+    6 - Variadic functions
+    7 - Source code information capture c++20
+    
+2 - General-purpose utilities
+    1 - Swap and type operations
+    2 - Integer comparison functions
+    3 - Relational operators
+    4 - Pairs and tuples
+    5 - Optional, variant and any
+    6 - Bitset
+    7 - Function objects
+    8 - Date and time
+    9 - Hash support
+    10 - Elementary string conversions c++17
+    11 - Formatting library c++20
+    12 - Relational operators c++98/c++20

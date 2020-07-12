@@ -1,0 +1,23 @@
+### Utilities ###
+
+initializer_list
+
+include directive:
+    #include <initializer_list>
+
+object of type std::initializer_list is proxy object that provides acces to array of objects
+Some states std::initializer_list will create automatically constructed
+
+initializer_list
+
+cap:
+    size -> returns the number of elements in the initializer list
+
+iterator:
+    begin
+    end
+
+
+std::tuple and initializer_list releations:
+
+The relevant std::tuple constructors are explicit. This means that what you want to do is not possible,
