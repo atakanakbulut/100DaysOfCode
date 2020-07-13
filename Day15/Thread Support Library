@@ -1,0 +1,34 @@
+### Thread Support Library ###
+
+includes threads,
+         mutual exclusion,
+         condition variables,
+          and futures.
+
+## threads
+    threads
+    jthread c++20
+
+## function manage
+    yield
+    get_id -> return thread id (spesific)
+    sleep_for
+    sleep_until
+
+## mutex
+    
+## Generic locking algorithms
+
+## Generic mutex management
+
+## Condition variables
+
+## Futures
+
+## supported concurrent thread count: 
+
+std::thread::hardware_concurrency()
+Returns the number of concurrent threads supported by the implementation. The value should be considered only a hint.
+ryzen 5 3600 is 12 
+
+

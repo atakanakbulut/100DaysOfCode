@@ -1,0 +1,19 @@
+
+### THREAD SUPPORT LIBRARY ###
+
+What is thread ? 
+https://en.wikipedia.org/wiki/Thread_(computing)
+
+
+Notes:
+
+  *** add #include <functional> for std::bind function (c++11)
+
+  *** threads should be use shared pointers..
+
+  *** if we use detach we must be use threadobject->joinable for join
+
+  *** std::thread::hardware_concurrency return concurrency thread count 
+  
+  *** std::this_thread::get_id() return thread's spesific get_id
+
