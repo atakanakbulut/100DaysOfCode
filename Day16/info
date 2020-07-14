@@ -1,0 +1,9 @@
+### THREAD SUPPORT LIBRARY ###
+
+MUTEX AND AFFINITY:
+
+    *** lock unlock multi thread application we can use conflict
+    *** try_lock -> if mutex not lock make lock else return false
+    *** std::lock_guard<std::mutex> lock(m_mutex) -> automatically unlock when getting out off scope
+    *** cpu affiniy using with native_handle and we can use with shared ptr and using with pthread_setaffinity_np
+    *** if your thread function no member use like => thread(std::bind(&Process::doProcess, process)));  process => std::shared_ptr<Process> process(new Process());
