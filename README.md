@@ -27,3 +27,5 @@
 #### Day 13 - Smart Pointers(weak_ptr)
 #### Day 14 - Initializer_list
 #### Day 15 - Thread Support Library Part 1
+#### Day 16 - Thread Support Library Part 2
+
