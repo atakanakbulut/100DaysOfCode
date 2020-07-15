@@ -1,0 +1,39 @@
+### THREAD SUPPORT LIBRARY ###
+
+ASYNC,
+FUTURE,
+PROMISE,
+PACKAGED_TASKS,
+ATOMICS
+
+ASYNC:  --> return future
+    *** async future library tarafından prototipleri sunulan bagımsız bir fonksiyondur. 
+    *** Bu fonksiyonlar asenkron olarak çalışarak return degeri future olarak döner,
+    *** Basit thread yapısı olarak kullanabiliriz
+    *** Async metodu, f işlevini eşzamansız olarak (potansiyel olarak bir iş parçacığı havuzunun parçası olabilecek ayrı bir iş parçacığında) çalıştırır ve sonunda bu işlev çağrısının sonucunu tutacak bir std :: future döner.
+    *** dönüş degeri olmayan bazı fonkiyonları bitirmelerini beklemeden çagırmak, görev bitene kadar nesne imha olmaz, 
+    *** Std::async'den elde edilen std::future bir referanstan taşınmaz ya da bir referansa bağlanmazsa, std :: future yıkıcısı, asenkron işlem tamamlanana kadar tam ifadenin sonunda bloke olur!!!
+
+async metodu:
+   future =  std::async(std::launch::async) -> thread içerisinde koşar, üst katmandır.
+   future =  std::async(std::launch::deferred) -> future nesnesinin get metodu cagırıldıgında koşar
+   future =  std::async(std::launch::async | std::launch::deferred) -> sistem yüküne göre otomatiktir.
+
+   olarak kullanılabilinir.
+
+
+promise:
+    *** promise den okuma yapmak istedigimizde kendi içerisinde future barındırır. ve bu future den elde etmmemiz gerekmektedir.
+    *** future ile degerlerimize ulaşabiliriz. Standartlar geregi threadler arasındaki durum ve veri paylaşımı için half dublex 
+    yapıda yani hem okuma hem yazma hakkı verilmemekteydi. Nesnelerin yaşama sürelerini garanti altına almak için bakıldığında 
+    std::future consumer/reader iken std::promise producer/writer durumlarını yerine getirmekle mükellef.
+    *** Promise eski yöntemlerdeki gibi ptr mutex condition_variable kullanmak yerine tek kullanım saglıyor fakat promise den future
+    elde elde etmek gereklidir.
+
+    std::future<int> fut = promiseObject.get_future();
+    std::thread th(startPromiseObject, 3, &promiseObject);
+
+    fut.get() -> return value..
+
+
+    

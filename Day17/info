@@ -1,0 +1,7 @@
+### THREAD SUPPORT LIBRARY ###
+
+ASYNC, DEFFERED, PROMISED
+
+   future =  std::async(std::launch::async) 
+   future =  std::async(std::launch::deferred) 
+   future =  std::async(std::launch::async | std::launch::deferred) -> according for system status 
