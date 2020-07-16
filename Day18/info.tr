@@ -1,0 +1,16 @@
+### THREAD SUPPORT LIBRARY ###
+
+Condition variable
+
+Koşul degişkeni nedir ? 
+
+    *** Bir koşulun dogru olmasını bekleyen nesneler oluşturmak için kullanılır
+    *** Multithread yazılım geliştirdigimiz durumlarda bir thread digerini beklemesi ve onun yaptıgı 
+        koşulu saglandıgı zaman devamp etmesi gibi durumlar için gereklidir.
+    *** std::future de kullanılabilir fakat futurenin amacı threadden veri döndürülmesi veya hatalı durumun bildirilmesi 
+    oldugu için bazı durumlarda daha güçlü mekanizmaya ihtiyaç duyulmaktadır.
+    *** bir thread işini yaparken diğerine ilişkin durumu aslında bir döngü içerisinde bekleyerek de kontrol edebiliriz.
+     Bu yaklaşım “busy wait” ya da “polling” denmektedir.
+    *** Multithread uygulamalarda çok fazla threadin birbirleri ile sorunsuz iletişimi ve senkronizasyon yapısını kurmaya yarar.
+    bir yada birden fazla threadin diger bir threadi beklemesi/ istenilen süre kadar vs beklemesi saglar , daha sonra işine devam eder.
+    *** wait komutuna yazılabilecek bir lambda fonksiyonu yada atomic bir deger ile notify edilebilir.
