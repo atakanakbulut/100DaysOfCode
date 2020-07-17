@@ -1,0 +1,38 @@
+####### Input output manipulators ######
+
+giriş çıkış manipulatorleri programımızda çok sık kullandığımız ve programızın 
+dogru veya yanlış giden yerlerini görmek içi outputda kullandığımız yöntemlerdir.
+En sık kullandığımız cout örnektir. Fakat kullanım açısından daha gelişmiş metodlar bulunmaktadır.
+
+io manipulatorleri için 
+#include <iomanip> headerini eklemeliyiz.
+
+
+boolalpha :  std::boolalpha(std::cout) yazınca tüm outputlar true or false olarak yazar
+noboolalpha: std::noboolalpha(std::cout) default eski haline döner
+output: false , true
+
+
+setfill -> çıktıda setw ile belirlenen boşlugu bununla doldurur
+setw -> bir sonraki çıktı için genişligi belirler..
+std::cout << std::setfill('#') << std::setw(10) << "Atakan" << std::endl;
+std::left , std::right ile saga sola atayabiliriz..
+output : ####Atakan
+
+
+setbase:
+n4 = 10
+std::cout << std::showbase << std::setbase(10) << "n4 as decimal " << n4 << std::endl;
+output: 0xa
+
+
+ends:
+    ‘\0’ ekler.
+
+
+std::flush:
+     yıgılan karakterleri bastırmak için kullanılır. thread için kullanılabilir duruma göre core dump alınabilir...
+
+showpos:
+    std::cout << std::showpos << 10 << std::endl;
+output : +10
