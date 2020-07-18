@@ -1,0 +1,63 @@
+##### Abstract class ####
+
+   Object oriented programlamada tüm classlar somut/belirli class olmak zorunda 
+degildir. Soyut sınıflar OO Programlamanın en büyük parçasıdır. Örnek olarak bir Sınıf
+çalışanı düşünelim ve her çalışan bir maaş almaktadır. Her bireyin maaşı farklı hesaplanmaktadır.
+
+   ** Javada abstract olarak tanımlanabiliyor fakat c++ da sanallık konusu için en az bir adet 
+saf sanal fonksiyon bulunması gerekmektedir. (Pure virtual)
+    virtual void process() = 0;  şeklindedir.
+
+   ** Bu kullanımın amacı soyut sınıflardan inheritance alan classlarda aynı isimde process fonksiyonları tanımlanması gereklidir.
+   Eger biz inheritance edip fonksiyonu tanımlamadıgımızda;
+
+   ERROR:: main.cpp:8:28: error: invalid new-expression of abstract class type ‘Master’ -->  hatasını alacagız...
+ 
+   fonksiyon tanımlaması yapıldıktan sonra asıl sınıf üzerindeki fonksiyon abstract sınıf üzerine yüklenerek override
+   dedigimiz durum oluşacaktır.
+
+   Soyut sınıfların kullanım amacına aslında bir miras alan sınıfları koşullandırmaktır. Başka bir örnegi ise soyut sınıflardan
+   nesne türetemeyecek olmamızdır... Eğer tanımlamayı denersek;
+   PureClass.h:4:7: note:   because the following virtual functions are pure within ‘PureClass’:
+   görecegiz...
+
+   virtual classlarda normal metotlar ve degişkenler tanımlayabiliriz.
+
+   Interface ile farkına bakacak olursak;
+
+   Abstract özellikleri;
+
+      ** Nesne türetilemez...
+      ** Genellikle kalıtım alırken uygularız
+      ** Abstract sınıflardan kalıtım alan sınıflar pure fonksiyonları tanımlama yapmak zorundadır
+      ** static olarak tanımlanamaz (nesne zaten yaratılamıyordu static olamaz)
+      ** public PureFonksiyon şeklinde tanımlanır.
+      ** Constructor ve Destructor bulundurabilir. Destructor kullanımı önemli olan bazı noktalar var. 
+      ** Daha cok javada söylenilen is-a ilişkisi vardır.
+
+      is a ilişkisi :
+      Engineer is a Worker
+
+      Interface ile farkları ise;
+
+      Aslında C++ da direk olarak javadaki gibi interface tanımı yok, IClassName olarak tanımlanıyor..
+   
+   Interface özellikleri:
+      ** nesne oluşturulamaz..
+      ** Bir sınıfın ne yapması gerektigini belirtir..
+      ** Bir sınıfı birden fazla ınterface kullanabilir..
+      ** can do ilişkisi vardır.
+      ** İçerisinde sadece pure fonksiyon ve Destructor olmalı..
+
+      can do ilişkisi
+
+      People can do run -> interface davranışları, kabiliyetleri belirleyen yerlerde kullanmamız daha dogru olacaktır..
+
+
+      Abstract class ve Interface arasındaki farklar ise;
+
+      ** abstract class constructor içerebilir interface içeremez(c++ da kullanılabilir)
+      ** abstract class da static üyeler içerebilir, 
+      ** abstract class normal fonksiyon ve degişken içerebilir fakat interface de içermemeli (tanımlanabiliyor..)
+
+
