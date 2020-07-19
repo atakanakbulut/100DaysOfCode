@@ -32,7 +32,7 @@
 #### Day 18 - Thread Support Library Part 4
 #### Day 19 - Input Output Manipulators
 #### Day 20 - Abstract and Interfaces
-#### Day 21 - 
+#### Day 21 - Static cast
 
 
 

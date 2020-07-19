@@ -1,0 +1,24 @@
+#### CAST OPERATIONS ####
+
+Genel olarak c++ da tür dönüşümleri ikiye ayrılıyor
+
+implicit ve explicit
+    1-) implicit type conversation -> dönüştürme işlemi otomatik olmaktadır. örnek olarak a+b işleminde double olarak olmaktadır.
+    2-) explicit type conversation -> a/b işleminde eger sayılar int ise sonuc int deger cıkar ve burada cast işlemi olması gereklidir..
+
+
+5 adet tür dönüşümü vardır.
+
+    *** static_cast
+    *** const_cast
+    *** dynamic_cast
+    *** reinterpret_cast
+    *** c style cast -> güvensiz --> int a = (int) value;
+
+## static_cast 
+    *** compile zamanında bilinen tür dönüşümünde kullanılır. Programda derleyiyice aslında degişken bu türdedir demesi gibidir.
+    static ifadesi derleme zamanını belirliyor...
+    *** legacy degişkenlerde kullanabilecegimiz gibi class cast işlemlerinde de kullanabiliriz fakat programın çökmesi kaçınılmaz olabilir..
+    *** -WAll parametresi ile derlenirken bazı fonksiyonlar unused hatası alabiliriz. bunun için static_cast<void>(ptr) ile bertaraf edebiliriz
+
+
