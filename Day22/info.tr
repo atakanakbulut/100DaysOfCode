@@ -1,0 +1,23 @@
+#### CAST OPERATIONS ####
+
+Genel olarak c++ da tür dönüşümleri ikiye ayrılıyor
+
+implicit ve explicit
+    1-) implicit type conversation -> dönüştürme işlemi otomatik olmaktadır. örnek olarak a+b işleminde double olarak olmaktadır.
+    2-) explicit type conversation -> a/b işleminde eger sayılar int ise sonuc int deger cıkar ve burada cast işlemi olması gereklidir..
+
+
+5 adet tür dönüşümü vardır.
+
+    *** static_cast
+    *** const_cast
+    *** dynamic_cast
+    *** reinterpret_cast
+    *** c style cast -> güvensiz --> int a = (int) value;
+
+## const_cast
+    **Const veya volatile olmadığını bildigimiz fakat bir noktada karşımıza const veya volatile olarak çıkan nesnelerin const durumunu kaldırmak için kullanılır.
+    Gerçekten ptr nin const olmadığını düşünüyorsak const_cast kullanabiliriz..
+    ** Genellikle const reference/pointer almasi gereken fonsiyonlarda tasarim hatasi sonucu const olmayan reference/pointer alan fonksiyonlari cagirmak icin kullanilir.
+    ** C++ programlarında const'u bol bol ve doğru yerlerde kullanmaya verilen ad "const correctness" dır.
+    ** başka bir tanım olarak const_cast bir değişkene const öğesini kaldırmak veya eklemek için kullanılabilir; Başka hiçbir C++ cast'i kaldıramaz
