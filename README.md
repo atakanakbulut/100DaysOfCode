@@ -32,8 +32,9 @@
 #### Day 18 - Thread Support Library Part 4
 #### Day 19 - Input Output Manipulators
 #### Day 20 - Abstract and Interfaces
-#### Day 21 - Static cast
-#### Day 22 - Const cast
+#### Day 21 - static_cast
+#### Day 22 - const_cast
+#### Day 23 - reinterpret_cast
 
 
 

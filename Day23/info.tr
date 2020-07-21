@@ -1,0 +1,29 @@
+#### CAST OPERATIONS ####
+
+Genel olarak c++ da tür dönüşümleri ikiye ayrılıyor
+
+implicit ve explicit
+    1-) implicit type conversation -> dönüştürme işlemi otomatik olmaktadır. örnek olarak a+b işleminde double olarak olmaktadır.
+    2-) explicit type conversation -> a/b işleminde eger sayılar int ise sonuc int deger cıkar ve burada cast işlemi olması gereklidir..
+
+
+5 adet tür dönüşümü vardır.
+
+    *** static_cast
+    *** const_cast
+    *** dynamic_cast
+    *** reinterpret_cast
+    *** c style cast -> güvensiz --> int a = (int) value;
+
+## reinterpret_cast (reinterpret -> yeniden yorumlama)
+    ** Herhangibi bir ptr nin diger ptr türüne dönüştürmesini saglamaktadır. 
+    ** Güvenlik açısından iyi degildir. Derleyici eldeki bit yapısını başka bir türe dönüştürmesini saglamaktadır (reinterpret)
+    ** Dönüşüm tehlikelidir. Hatta zorunlu kalmadıkca kullanılmamalıdır.
+    ** hizalanmış bir işaretçinin düşük bitlerine veri depolamak gibi farklı dönüşümler ve bit manipülasyonları yapılır.
+    ** void türüne çevirme, unsigned char -> u_int8_t (aslında aynı) dönüşümleri yapabiliriz..
+
+
+== > kalıtım türevinde işaretçi referanslar için ==> dynamic_cast
+== > Sıradan tip dönüşümler için ==> static_cast
+== > Bit desenlerinin düşük seviyeli yeniden yorumlanması için ==> reinterpret_cast
+== > const volatile öğesinden kurtulmak için ==> const_cast
