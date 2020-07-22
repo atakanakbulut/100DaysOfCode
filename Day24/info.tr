@@ -1,0 +1,25 @@
+#### CAST OPERATIONS ####
+
+Genel olarak c++ da tür dönüşümleri ikiye ayrılıyor
+
+implicit ve explicit
+    1-) implicit type conversation -> dönüştürme işlemi otomatik olmaktadır. örnek olarak a+b işleminde double olarak olmaktadır.
+    2-) explicit type conversation -> a/b işleminde eger sayılar int ise sonuc int deger cıkar ve burada cast işlemi olması gereklidir..
+
+
+5 adet tür dönüşümü vardır.
+
+    *** static_cast
+    *** const_cast
+    *** dynamic_cast
+    *** reinterpret_cast
+    *** c style cast -> güvensiz --> int a = (int) value;
+
+## dynamic_cast (dinamik tür dönüştürme)
+    ** referanslar ve göstericiler için kullanılır..
+    ** Geri dönüş degeri istenilen türe dönüştürme işlemi başarısız ise NULL olarak döner..
+    ** Genel kullanım alanlarından biri runtime koşan bir yazılımda tür belirlemede kullanılabilinir..
+    ** üst sınıfta en az bir adet virtual fonksiyon olmak zorunludur.
+    ** Yalnızca polimorfizmi işlemek için kullanılır. Herhangibi poliformik bir tipte işaretci veya referansı başka bir tipe dönüştürme
+    kullanılabilinir.
+    ** Asıl amacı, tür dönüştürme sonucunun hedef işaretçisi türünün geçerli bir tam nesnesine işaret ettiğinden emin olmaktır.
