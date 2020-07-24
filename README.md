@@ -35,8 +35,8 @@
 #### Day 21 - static_cast
 #### Day 22 - const_cast
 #### Day 23 - reinterpret_cast
-#### Day 23 - dynamic_cast
-#### Day 24 - Other
-#### Day 25 - Copy Constructor
+#### Day 24 - dynamic_cast
+#### Day 25 - Other
+#### Day 26 - Copy Constructor
 
 
