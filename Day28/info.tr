@@ -1,0 +1,23 @@
+#### Libraries ####
+
+Libraries 
+    1- Static Libraries
+    2- Shared Libraries
+
+kaynak kod => derlenerek object file => linkleme/baglama ile > executable
+
+#### Static Libraries ####
+    *** Static kütüphaneler oluşturuldugunda linuxta .a windowsta ise .lib uzantılı dosyalar 
+    oluşturur. Başka bir ismi ise arşiv dosyalarıdır. Çünkü kütüphane programımızla birlikte derlenerek
+    fonksiyonlar, degişkenler tek bir doyada birleşir.Baglama zamanı direk olarak baglanabilir.
+    *** Çalıştırılabilir dosyaya direk entergre olunur. bu yüzden statik kütüphane
+    kullandıgımızda executable boyutu direk olarak artar. 
+    *** statik kütüphane oluştururken ar den faydalanıyoruz..
+            $ ar rcs libstatic.a test.o test.h ... --> statik kütüphane oluşturma
+            $ ar t libstatic.a --> statik kütüphaneyi listeler
+    
+## Build ##
+    --> make lib -> create first object after static library
+    --> make static -> create static library and compile and linked..
+
+
