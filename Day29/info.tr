@@ -1,0 +1,27 @@
+#### Libraries ####
+
+Libraries 
+    1- Static Libraries
+    2- Shared Libraries
+
+kaynak kod => derlenerek object file => linkleme/baglama ile > executable
+
+#### Dynamic Libraries ####
+
+    ** Dinamik kütüphaneler programın çalışma sırasında dahil edilirler programınızı dinamik kütüphane kullanacak şekilde derlendiginde 
+    kütüphane programa o anda dahil edilmez programa kod eklenmez. uzantısı .so şeklindedir bu şeklinde aynı kütüphaneyi ortak olarak kullanılabilir.
+    ** Bu sayede program boyutu çok küçülmüş olur. Ayrıca güncelleme ypamak için kütüphaneyi kullanan tüm programlar yerine yeniden derleme gerekmez.
+    ** Bir program dinamik kütüphaneden çagırıldıgında linker çagrılan fonksiyonu dinamik kütüpaneden çekerek executable  dosya içerisine yazmaz. Executable sadece
+    hangi fonksiyonu kullandıgını yazar. Bir program çalıştırılmak istendiğinde işletim sistemi yükleyicisi devreye girerek shared Libraries bellege yükler. 
+    ** 
+
+
+STATIC VE DYNAMIC FARKLAR
+    1- Shared kütüphaneler toplamda çalıştırılabilinir. Static kütüphanede tüm kod olacagı için binary boyutu çok fazladır.
+    2- dinamik kütüphanelerde tüm kodu derlemek gerekmez.
+    3- dinamik kütüphane ise memory de çok yer kaplar..
+    4- dinamik kütüphane fiziksel bellegin daha performanslı kullanılmasını saglar.
+
+***NOTLAR***
+    ** kütüphanelerin hem statik hem de dinamik halleri bulunabilmektedir. Bağlayıcı seçim olanağı varsa dinamik kütüphaneleri seçmektedir.
+     Örneğin, kütüphanenin -lXXX şeklinde gösterilmesi durumunda, bağlayıcı libXXX.a dosyasını değil libXXX.so dosyasını seçmektedir.
