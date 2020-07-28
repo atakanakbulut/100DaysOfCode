@@ -1,0 +1,23 @@
+#### SIGNALS ####
+
+Sinyaller, işletim sistemi tarafından bir programı erken sonlandırabilen bir sürece verilen kesintilerdir.
+Linuxta ctrl+c ile kesmeler(interrupt) oluşturabilirsiniz.
+
+SIGABRT - (Signal Abort) Durdurma işlevi tarafından başlatılan gibi anormal sonlandırma.
+SIGFPE	- Sinyal Kayan Nokta İstisnası) Sıfır bölme veya taşmaya neden olan bir işlem (kayan nokta işleminde olması gerekmez) gibi hatalı aritmetik işlem.
+SIGILL	(Signal Illegal Instruction) Invalid function image, such as an illegal instruction. This is generally due to a corruption in the code or to an attempt to execute data.
+SIGILL (Sinyal Yasadışı Talimatı) Yasadışı talimat gibi geçersiz işlev görüntüsü. SIGSEGV (Sinyal Segmentasyon İhlali) Depolama birimine geçersiz erişim: Bir program ayırdığı belleği okumaya veya yazmaya çalıştığında.
+SIGTERM (Sinyal Sonlandır) Programa sonlandırma isteği gönderildi.
+
+        // signal numarası, ikincisi bir sinyal işleme fonksiyonunun göstergesidir. 
+signal(registered signal, signal handler)
+
+Genel olarak 2 aşamadan oluşur.
+    1 - Raised -> signali olusturan kısımdır raise(SIGABRT) gibi kullanarak signal oluşturabiliriz.
+    2 - Hnadler -> oluşturulan signali handle ettigimiz kısım duruma göre exit v.b yapabiliriz..
+
+
+
+Pending Signal Nedir ?
+Eğer bir signal handler çalıştırılıyorsa aynı sinyalden 1 veya daha fazla gelse bile signal handler bir nevi bloke olduğu için tekrar çalıştırılmaz.
+
