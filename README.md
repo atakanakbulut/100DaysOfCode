@@ -4,7 +4,7 @@
     A- This repository include C, C++ 11 and higher and Data structures and algorithms.
 
 ### Q-How long will be continue?
-    A- 100 Day
+    A- 30 Day
 
 ### Q-What is your platforms
     A- Linux based Ubuntu 18.04, ide: Qtcreator 
